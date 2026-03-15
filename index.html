@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OU Used Car Dealership</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/usedCars-TH-1.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    
+
+    <header>
+        <h1>Oakland University Used Car Sales</h1>
+    </header>
+
+    <main>
+        <aside class="filter-section">
+            <h2>Filter Listings</h2>
+            <form id="filter-form">
+                <div class="filter-group">
+                    <label>Year Range</label>
+                    <div class="range-inputs">
+                        <input type="number" id="min-year" placeholder="Min Year">
+                        <input type="number" id="max-year" placeholder="Max Year">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Make</label>
+                    <select id="make-select" multiple>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="BMW">BMW</option>
+                        </select>
+                    <small>Hold Ctrl (Cmd) to select multiple</small>
+                </div>
+
+                <div class="filter-group">
+                    <label for="max-mileage">Max Mileage</label>
+                    <input type="number" id="max-mileage" placeholder="e.g. 30000">
+                </div>
+
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <div class="range-inputs">
+                        <input type="number" id="min-price" placeholder="Min $">
+                        <input type="number" id="max-price" placeholder="Max $">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Color</label>
+                    <div id="color-checkboxes">
+                        <label><input type="checkbox" value="Silver"> Silver</label>
+                        <label><input type="checkbox" value="White"> White</label>
+                        <label><input type="checkbox" value="Black"> Black</label>
+                        <label><input type="checkbox" value="Blue"> Blue</label>
+                        <label><input type="checkbox" value="Red"> Red</label>
+                    </div>
+                </div>
+
+                <button type="button" id="apply-filters">Apply Filters</button>
+                <button type="reset" id="reset-filters">Clear All</button>
+            </form>
+        </aside>
+
+        <section class="listings-section">
+            <div id="car-container" class="car-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Oakland University CSE - CSI 3150</p>
+    </footer>
+
 </body>
 </html>
