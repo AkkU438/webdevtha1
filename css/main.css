@@ -1,32 +1,21 @@
-/* Modern Sleek Color Palette */
-:root {
-    --bg-color: #f8fafc;
-    --sidebar-bg: #ffffff;
-    --card-bg: #ffffff;
-    --primary-accent: #2563eb; /* Modern Blue */
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --header-bg: #0f172a; /* Deep Navy/Slate */
-    --border-color: #e2e8f0;
-}
-
+/*Layout Section*/
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background-color: white;
+    color: #1e293b;
 }
 
 header {
-    background-color: var(--header-bg);
+    background-color: #0e172d;
     color: white;
     padding: 1.5rem;
     text-align: left;
     padding-left: 10%;
-    border-bottom: 4px solid var(--primary-accent);
+    border-bottom: 4px solid #2563eb;
 }
 
 header h1 {
@@ -43,13 +32,13 @@ main {
     gap: 30px;
 }
 
-/* Sidebar Filters */
+/* Filter Section */
 .filter-section {
     width: 280px;
-    background: var(--sidebar-bg);
+    background: white;
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #e2e8f0;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     height: fit-content;
 }
@@ -62,9 +51,9 @@ main {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--text-muted);
+    color: #5a6676;
     margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #e2e8f0;
     padding-bottom: 8px;
 }
 
@@ -76,7 +65,7 @@ main {
 input[type="number"], select {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #e2e8f0;
     border-radius: 6px;
     background-color: #f1f5f9;
     transition: border 0.2s;
@@ -84,7 +73,7 @@ input[type="number"], select {
 
 input:focus {
     outline: none;
-    border-color: var(--primary-accent);
+    border-color: #2563eb;
 }
 
 /* Checkbox Styling */
@@ -99,7 +88,7 @@ input:focus {
     width: 18px;
     height: 18px;
     margin-right: 12px;
-    accent-color: var(--primary-accent);
+    accent-color: #2563eb;
     cursor: pointer;
 }
 
@@ -116,7 +105,7 @@ button {
 }
 
 #apply-filters {
-    background-color: var(--primary-accent);
+    background-color: #2563eb;
     color: white;
 }
 
@@ -127,44 +116,40 @@ button {
 
 #reset-filters {
     background-color: transparent;
-    color: var(--text-muted);
+    color: #5a6676;
     text-decoration: underline;
 }
 
-/* Car Cards */
-/* Product Card Grid - Set to 3 Columns */
+/* Car Cards (Set to 3 Columns) */
 .car-grid {
     display: grid;
-    /* This creates exactly 3 columns, each taking 1 fraction of space */
     grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
     width: 100%;
 }
 
-/* Ensure cards take up full width of their grid cell */
 .card {
-    background: var(--card-bg);
+    background: white;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #e2e8f0;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Makes all cards in a row the same height */
+    height: 100%;
 }
 
-/* RESPONSIVENESS: This makes sure it looks good on all devices */
-
-/* If the screen is medium-sized (Tablets), show 2 columns */
+/* Responsive */
+/*Tablet (2 columns)*/
 @media (max-width: 1100px) {
     .car-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* If the screen is small (Phones), show 1 column */
+/* Phones (1 column) */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Moves filters to the top on mobile */
+        flex-direction: column;
     }
     
     .filter-section {
@@ -177,6 +162,7 @@ button {
     }
 }
 
+/* Misc/Finishing touches for component card (and footer) */
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -192,7 +178,7 @@ button {
 }
 
 .price {
-    color: var(--primary-accent);
+    color: #2563eb;
     font-size: 1.4rem;
     font-weight: 800;
     margin: 10px 0;
@@ -200,14 +186,6 @@ button {
 
 .card p {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: #5a6676;
     margin: 5px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--header-bg);
-    color: #94a3b8;
-    font-size: 0.8rem;
 }

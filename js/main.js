@@ -1,4 +1,4 @@
-// Function to generate the HTML for a single car card
+/* Generates the HTML for a card component */
 function createCarCard(car) {
     return `
         <article class="card">
@@ -13,10 +13,10 @@ function createCarCard(car) {
     `;
 }
 
-// Function to display cars in the grid
+/* Displays Cards */
 function displayCars(carsArray) {
     const container = document.getElementById('car-container');
-    container.innerHTML = ""; // Clear existing
+    container.innerHTML = ""; 
 
     if (carsArray.length === 0) {
         container.innerHTML = `
@@ -32,17 +32,15 @@ function displayCars(carsArray) {
     });
 }
 
-// Main filtering logic
+/* Filtering logic */
 function filterCars() {
-    // Get values from inputs
     const minYear = parseInt(document.getElementById('min-year').value) || 0;
     const maxYear = parseInt(document.getElementById('max-year').value) || 3000;
-    const maxMileage = parseInt(document.getElementById('max-mileage').value) || Infinity;
+    const maxMileage = parseInt(document.getElementById('max-mileage').value) || 1000000;
     const minPrice = parseInt(document.getElementById('min-price').value) || 0;
-    const maxPrice = parseInt(document.getElementById('max-price').value) || Infinity;
+    const maxPrice = parseInt(document.getElementById('max-price').value) || 1000000;
     
     // Get Selected Makes (Multiple)
-    const makeSelect = document.getElementById('make-select');
     const makeCheckboxes = document.querySelectorAll('input[name="make"]:checked');
     const selectedMakes = Array.from(makeCheckboxes).map(cb => cb.value);
 
