@@ -43,12 +43,11 @@ function filterCars() {
     
     // Get Selected Makes (Multiple)
     const makeSelect = document.getElementById('make-select');
-    const selectedMakes = Array.from(makeSelect.selectedOptions).map(opt => opt.value);
+    const makeCheckboxes = document.querySelectorAll('input[name="make"]:checked');
+    const selectedMakes = Array.from(makeCheckboxes).map(cb => cb.value);
 
-    // Get Selected Colors (Checkboxes)
-    const colorCheckboxes = document.querySelectorAll('#color-checkboxes input:checked');
+    const colorCheckboxes = document.querySelectorAll('input[name="color"]:checked');
     const selectedColors = Array.from(colorCheckboxes).map(cb => cb.value);
-
     // Filter the array
     const filtered = usedCars.filter(car => {
         const matchesYear = car.year >= minYear && car.year <= maxYear;

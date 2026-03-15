@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OU Used Car Dealership</title>
+    <title>Used Car Dealership</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/usedCars-TH-1.js"></script>
     <script src="js/main.js" defer></script>
@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <h1>Oakland University Used Car Sales</h1>
+        <h1>Used Car Sales</h1>
     </header>
 
     <main>
@@ -27,17 +27,41 @@
                 </div>
 
                 <div class="filter-group">
-                    <label>Make</label>
-                    <select id="make-select" multiple>
-                        <option value="Toyota">Toyota</option>
-                        <option value="Honda">Honda</option>
-                        <option value="Ford">Ford</option>
-                        <option value="Nissan">Nissan</option>
-                        <option value="Tesla">Tesla</option>
-                        <option value="Lexus">Lexus</option>
-                        <option value="BMW">BMW</option>
-                        </select>
-                    <small>Hold Ctrl (Cmd) to select multiple</small>
+                    <h2>Make</h2>
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-toyota" name="make" value="Toyota">
+                        <label for="make-toyota">Toyota</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-honda" name="make" value="Honda">
+                        <label for="make-honda">Honda</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-ford" name="make" value="Ford">
+                        <label for="make-ford">Ford</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-nissan" name="make" value="Nissan">
+                        <label for="make-nissan">Nissan</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-tesla" name="make" value="Tesla">
+                        <label for="make-tesla">Tesla</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-lexus" name="make" value="Lexus">
+                        <label for="make-lexus">Lexus</label>
+                    </div>
+                    
+                    <div class="checkbox-pair">
+                        <input type="checkbox" id="make-bmw" name="make" value="BMW">
+                        <label for="make-bmw">BMW</label>
+                    </div>
                 </div>
 
                 <div class="filter-group">
@@ -53,16 +77,34 @@
                     </div>
                 </div>
 
-                <div class="filter-group">
-                    <label>Color</label>
-                    <div id="color-checkboxes">
-                        <label><input type="checkbox" value="Silver"> Silver</label>
-                        <label><input type="checkbox" value="White"> White</label>
-                        <label><input type="checkbox" value="Black"> Black</label>
-                        <label><input type="checkbox" value="Blue"> Blue</label>
-                        <label><input type="checkbox" value="Red"> Red</label>
-                    </div>
+            <div class="filter-group">
+                <h2>Color</h2>
+                
+                <div class="checkbox-pair">
+                    <input type="checkbox" id="color-silver" name="color" value="Silver">
+                    <label for="color-silver">Silver</label>
                 </div>
+                
+                <div class="checkbox-pair">
+                    <input type="checkbox" id="color-white" name="color" value="White">
+                    <label for="color-white">White</label>
+                </div>
+                
+                <div class="checkbox-pair">
+                    <input type="checkbox" id="color-black" name="color" value="Black">
+                    <label for="color-black">Black</label>
+                </div>
+                
+                <div class="checkbox-pair">
+                    <input type="checkbox" id="color-blue" name="color" value="Blue">
+                    <label for="color-blue">Blue</label>
+                </div>
+                
+                <div class="checkbox-pair">
+                    <input type="checkbox" id="color-red" name="color" value="Red">
+                    <label for="color-red">Red</label>
+                </div>
+            </div>
 
                 <button type="button" id="apply-filters">Apply Filters</button>
                 <button type="reset" id="reset-filters">Clear All</button>
@@ -76,7 +118,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Oakland University CSE - CSI 3150</p>
+        <p> Aditya Kurup CSI 3150</p>
     </footer>
 
 </body>
